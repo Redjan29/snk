@@ -1,0 +1,288 @@
+/* reset css */
+/* pas travailler en px ni em */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background: #222 url(https://www.ledojomanga.com/bdd_local/upload/images/l-attaque-des-titans-la-derniere-saison.jpg)no-repeat fixed center center / cover;
+    opacity: 1;
+}
+body{
+    font: 1.6rem 'Montserrat', sans-serif;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6,p,figure,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    color: #222;
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+button{
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+/* theme css */
+:root{
+    --default-color: #222;
+    --background-color-header: #EBF7E3;
+    --main-color: #9BD770;
+    --middle-color: #375F1B;
+    --color-text: #fff;
+}
+/* theme css */
+:root{
+    --default-color: #222;
+    --background-color-header: #EBF7E3;
+    --main-color: #9BD770;
+    --middle-color: #375F1B;
+    --color-text: #fff;
+}
+
+ /* Menu */
+
+ header ul{
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 100%;
+    cursor: pointer;
+    
+
+}
+.Red{
+    background-color: transparent;
+}
+header nav ul li a {
+    color: #ccc;
+
+}
+header h1{
+    color: #ccc;
+}
+header ul li{
+    height: 6rem;
+    text-align: center;
+    line-height: 6rem;
+    padding: 0rem;
+    background-color: rgba(92, 11, 11, 0.733);
+    border-radius: 0.5rem; ;
+
+}
+.first, .Red:hover{
+    background-color: transparent;
+}
+
+header ul li a{
+    color: #fff;
+    font-size: 2rem;
+    
+}
+header nav ul li:nth-child(n):hover{
+    background-color: rgba(168, 37, 20, 0.822);
+}
+
+
+  /* Contenu */
+  header h1, footer p, section h3{
+    font-weight: 300;
+    text-align: center;
+    line-height: 6.5rem;
+}
+
+header h1{
+    color: var(--middle-color);
+    margin: 0 auto;
+}
+
+main figure{
+    cursor: url(http://www.cursor.cc/cursor/873/21/cursor.png),auto;
+}
+
+.article_of{
+   height: 0; /* les articles cachés */
+   opacity: 0;
+   z-index: -1;
+   overflow: hidden;
+   transition: all .6s ease-in-out;
+}
+
+/*image de la div*/
+.First-image{
+    height: 40vh;
+    width: 100%;
+    background: url(../asset/primordiaux2.png)no-repeat fixed center center ;
+}
+
+.article_on{
+    opacity: 1;
+    z-index: 1;
+    height: initial;
+}
+
+/* logo*/
+.first-logo{
+    clip-path: circle(50%);
+    position: absolute;
+    top: 0.5rem;
+    left: 12rem;
+    z-index: 2;
+    width: 5rem;
+    height: 5rem;
+}
+
+.second-logo{
+    clip-path: circle(50%);
+    z-index: 2;
+    width: 5rem;
+    height: 5rem;
+}
+
+figure figcaption h2::before{
+    content: url("../asset/book-open.svg");
+    vertical-align: middle;
+    margin-right: .7rem;
+   
+}
+
+main figure{
+    display: grid;
+    max-width: 80rem;
+    margin: 1rem auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem; /* espace image et texte en creant des troues en colonne*/
+    align-items: top;
+    border: solid .1rem #ccc;
+    padding: 1rem;
+    background-color: #fafafab6;
+    
+}
+
+main figure img{
+    order: 1;
+   display: block;
+   width: 100%;
+   clip-path: circle(100%);
+   height: 25rem;
+}
+main figure figcaption h2,main figure figcaption p{
+    padding: 1rem 1rem 0 1rem;
+
+}
+main figure figcaption time{
+    padding: 1rem;
+    display: block;
+    color: rgb(92, 89, 89);
+    font-style: italic;
+    font-size: small;
+}
+main figure:nth-child(2n+2) figcaption{
+    order: 1;
+}
+main figure figcaption p{
+    line-height: 2.6rem;
+    padding-top: 0;
+}
+button{
+    font-size: initial;
+    padding: 1rem;
+    display: block;
+    width: 20rem;
+    text-align: center;
+    border: solid .1rem #222;
+    margin: 0 auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #f3722dc4;
+    border-radius: 0.5rem;
+
+}
+main button:hover{
+    background-color:#f85e0bd5
+}
+main .btn-open::before{
+    content:'+ ADD MORE';
+}
+main .btn-remove::before{
+    content:'- LESS ARTICLE';
+}
+details{
+    max-width: 80rem;
+    margin:1rem auto;
+    border: solid .1rem #ccc;
+    padding: 1rem;
+    background-color: rgba(207, 203, 203, 0.747);
+    
+}
+details summary{
+    list-style-type: none;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    
+}
+
+details summary::before{
+    display: inline-block;
+    content: "\203A";
+    margin-right: .5rem;
+    transform: rotate(0deg);
+    vertical-align: top;
+}
+.place{
+    line-height: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+
+}
+details[open] summary::before{
+    content: "\203A";
+    transform: rotate(90deg);
+}
+
+
+
+/* responsive */
+
+ 
+@media screen and (max-width: 70rem){
+    main figure{
+    grid-template-columns: repeat(1, 1fr);
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    main figure:nth-child(2n + 2) figcaption{
+        order:initial;
+    }
+    header nav ul{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4 ,1fr);
+        grid-gap: 0rem;
+    }
+    .Red{
+        grid-column: 1/5;
+        text-align: center;
+    }
+}
+@media screen and (orientation:landscape){
+    main figure{
+        grid-template-columns: repeat(2, 1fr);
+        }
+        header h1{
+            font-size: xx-large;
+        }
+        main figure:nth-child(2n + 2) figcaption{
+            order: 1;
+        }
+
+}
